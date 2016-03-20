@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="LayoutPadrao">
+<head>
+<title>Cadastro de usuários</title>
+</head>
+<section layout:fragment="conteudo">
+
+	<form th:action="@{/users}" class="form-horizontal" method="POST">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="clearfix">
+					<h1 class="panel-title aw-title-panel">
+						<strong>Novo Usuário</strong>
+					</h1>
+
+					<a class="btn btn-link aw-link-panel" th:href="@{/}"> Voltar
+						para o login </a>
+				</div>
+			</div>
+
+			<div class="panel-body">
+				<div class="form-group">
+					<label for="nome" class="col-sm-2 control-label">Nome
+						Completo</label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="nome" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="cpf" class="col-sm-2 control-label">CPF</label>
+					<div class="col-sm-2">
+						<input type="text" class="form-control" id="cpf" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="dataNascimento" class="col-sm-2 control-label">Data
+						de nascimento</label>
+					<div class="col-sm-2">
+						<div class="input-group date">
+							<div class="input-group-addon">
+								<span class="glyphicon glyphicon-calendar"></span>
+							</div>
+							<input type="text" class="form-control" id="dataNascimento"
+								data-provide="datepicker" data-date-format="dd/mm/yyyy"
+								data-date-language="pt-BR" data-date-autoclose="true"
+								data-date-today-highlight="true" data-date-orientation="bottom"
+								readonly="readonly" />
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="nomeUsuario" class="col-sm-2 control-label">Nome de usuário</label>
+					<div class="col-sm-3">
+						<input id="nomeUsuario" type="text" class="form-control"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="password" class="col-sm-2 control-label">Sexo</label>
+					<div class="col-sm-2">
+						<select class="form-control">
+							<option></option>
+							<option value="M">Masculino</option>
+							<option value="F">Feminino</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="email" class="col-sm-2 control-label">E-mail</label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control" id="email" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="password" class="col-sm-2 control-label">Senha</label>
+					<div class="col-sm-2">
+						<input type="password" class="form-control" id="password" />
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button id="btn-salvar" style="margin-right: 10px" type="submit" class="btn btn-primary col-md-2 col-sm-5">Salvar</button>
+						<input type="reset" class="btn btn btn-danger col-sm-5 col-md-2" value="Limpar"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+</section>
+</html>

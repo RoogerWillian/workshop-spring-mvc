@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+.container {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.content {
+	display: inline-block;
+	text-align: left;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.input-group {
+	border: none;
+}
+
+.panel-login {
+	margin-top: 20px;	
+}
+
+.aw-link-panel {
+	float: right;
+	padding: 0px;
+}
+
+.aw-title-panel {
+	float: left;
+	padding-top: 2px;
+}
